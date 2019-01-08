@@ -30,7 +30,7 @@ class Solution:
         # dp[0][j] will then equal 1 for any j since any set can add to zero by
         # excluding all items.
         n = len(nums)
-        dp = [[int(j == 0) for _ in range(n + 1)] for j in range(capacity + 1)]
+        dp = [[int(j == 0) for _ in range(n + 1)] for j in range(target + 1)]
         
         # This is a Subset-Sum problem where the target sum = (S + total) // 2
         # see https://en.wikipedia.org/wiki/Subset_sum_problem
@@ -44,7 +44,7 @@ class Solution:
         # in the set of solutions. This then increases the number of solutions
         # by a factor of the number of elements in the power set of Z, i.e.
         # 2 ^ zero_count.
-        return dp[capacity][n] * pow(2, zero_count)
+        return dp[target][n] * pow(2, zero_count)
 
 s = Solution()
 S = 0

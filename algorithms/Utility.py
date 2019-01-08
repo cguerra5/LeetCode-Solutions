@@ -84,8 +84,7 @@ def smallestLargerValue(arr, target):
 def binarySearch(arr, target):
     """
     For a sorted array arr, returns the index of the smallest value that
-    is greater than target using a binary search. If dupicates of this
-    value exist, then it finds the leftmost occurence.
+    is greater than target using a binary search.
     """
     left_bound = 0
     right_bound = len(arr)

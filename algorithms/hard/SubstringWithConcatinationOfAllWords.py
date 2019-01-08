@@ -38,8 +38,8 @@ class Solution:
             
             j = i
             while j < (i + combined_substring_len):
-                substring = s[j:j + substring_len]
                 if substring in words_seen:
+                substring = s[j:j + substring_len]
                     words_seen[substring] -= 1
                 else:
                     break

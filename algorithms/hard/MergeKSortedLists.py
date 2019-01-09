@@ -47,7 +47,7 @@ class Solution:
         
         merged_list = self.popListNode(min_heap, lists)
         next_node = merged_list
-        while len(min_heap) > 0:
+        while min_heap:
             next_node.next = self.popListNode(min_heap, lists)
             next_node = next_node.next
         
@@ -64,5 +64,8 @@ for arr in arr_lists:
     ListNode_lists.append(head)
 
 s = Solution()
-s.mergeKLists([[]])
+lis = s.mergeKLists(ListNode_lists)
+while lis:
+    print(lis.val)
+    lis = lis.next
 
